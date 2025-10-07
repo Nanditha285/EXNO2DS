@@ -1,4 +1,3 @@
-<img width="678" height="696" alt="image" src="https://github.com/user-attachments/assets/881698ea-d7bf-40bb-8648-d0bfc7f7d7d8" /># EXNO2DS
 # AIM:
       To perform Exploratory Data Analysis on the given data set.
       
@@ -117,6 +116,8 @@ sns.jointplot(x='Age',y='Fare',data=df)
 
 sns.jointplot(x='Age',y='Fare',data=df,kind='kde')
 
+<img width="678" height="696" alt="Screenshot 2025-10-07 215252" src="https://github.com/user-attachments/assets/1a6f02c4-63e2-4807-bc51-9f62c62dc0cc" />
+
 
 sns.jointplot(x='Age',y='Fare',data=df,kind="hist")
 
@@ -125,16 +126,27 @@ sns.jointplot(x='Age',y='Fare',data=df,kind="hist")
 
 sns.pairplot(data=df)
 
+<img width="622" height="642" alt="Screenshot 2025-10-07 221143" src="https://github.com/user-attachments/assets/b33412e3-7d47-49cc-b68e-7143de64c3cc" />
 
 
 corr1=df.select_dtypes(include=["number"]).corr()
 
 sns.heatmap(corr1,annot=True)
 
+<img width="598" height="476" alt="Screenshot 2025-10-07 220446" src="https://github.com/user-attachments/assets/c0234f17-cd10-460f-aeda-eac071aec6eb" />
 
 
+sns.catplot(x='Gender',col='Survived',data=df,kind='count',color='green')
+
+![WhatsApp Image 2025-10-07 at 16 06 10_68f7b666](https://github.com/user-attachments/assets/88956ccf-c8c3-4af1-b6ee-53f2d620615d)
 
 
+df.boxplot(column="Survived",by="Gender")
+
+![WhatsApp Image 2025-10-07 at 16 06 10_68f7b666](https://github.com/user-attachments/assets/f7fb2c8a-90ac-49cd-bf2c-bbae69a658a7)
+
+
+sns.catplot(data=df,col="Suvived",x="Gender",hue="Pclass",kind="count")
 
 
 
