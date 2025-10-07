@@ -1,4 +1,4 @@
-# EXNO2DS
+<img width="678" height="696" alt="image" src="https://github.com/user-attachments/assets/881698ea-d7bf-40bb-8648-d0bfc7f7d7d8" /># EXNO2DS
 # AIM:
       To perform Exploratory Data Analysis on the given data set.
       
@@ -88,6 +88,68 @@ sns.countplot(x="Survived",hue="Gender",data=df)
 sns.catplot(x="Survived",hue="Gender",data=df,kind="count")
 
 <img width="980" height="722" alt="image" src="https://github.com/user-attachments/assets/906f4bca-b1b4-424e-9f9a-b7bf4be97ebc" />
+
+
+sns.catplot(x="Survived",hue="Gender",data=df,kind="violin")
+
+![WhatsApp Image 2025-10-07 at 16 06 10_83acbaa3](https://github.com/user-attachments/assets/4bd7ed53-72b4-4d47-86dd-ace90fba7ae0)
+
+
+sns.boxplot(data=df)
+
+<img width="798" height="617" alt="image" src="https://github.com/user-attachments/assets/eb46e75e-a603-4ead-ae2e-9c568f0653ab" />
+
+
+sns.scatterplot(data=df)
+
+<img width="829" height="638" alt="image" src="https://github.com/user-attachments/assets/9385baf0-8b69-4d35-909c-0819d4c5ad87" />
+
+
+sns.scatterplot(x=df['Age'],y=df['Fare'])
+
+<img width="886" height="618" alt="Screenshot 2025-10-07 214720" src="https://github.com/user-attachments/assets/a7b62f38-be72-4d2e-aa7b-84bcab3c120f" />
+
+
+sns.jointplot(x='Age',y='Fare',data=df)
+
+<img width="724" height="699" alt="image" src="https://github.com/user-attachments/assets/66bcc2cd-c480-4b8a-8a72-061640b12cc9" />
+
+
+sns.jointplot(x='Age',y='Fare',data=df,kind='kde')
+
+
+sns.jointplot(x='Age',y='Fare',data=df,kind="hist")
+
+<img width="678" height="696" alt="Screenshot 2025-10-07 215252" src="https://github.com/user-attachments/assets/9f15fc59-64d6-48bc-ba72-58e1a6b963e7" />
+
+
+sns.pairplot(data=df)
+
+
+
+corr1=df.select_dtypes(include=["number"]).corr()
+
+sns.heatmap(corr1,annot=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
