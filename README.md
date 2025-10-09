@@ -24,10 +24,6 @@ STEP 8: Use heatmap method of representation to show relationships between two v
 ## CODING AND OUTPUT
         <<INCLUDE YOUR CODING AND OUTPUT SCREENSHOTS>>
 
-# RESULT
-        <<INCLUDE YOUR RESULT HERE>>
-
-
 
 import pandas as pd
 
@@ -116,7 +112,7 @@ sns.jointplot(x='Age',y='Fare',data=df)
 
 sns.jointplot(x='Age',y='Fare',data=df,kind='kde')
 
-<img width="678" height="696" alt="Screenshot 2025-10-07 215252" src="https://github.com/user-attachments/assets/1a6f02c4-63e2-4807-bc51-9f62c62dc0cc" />
+<img width="718" height="704" alt="Screenshot 2025-10-07 215104" src="https://github.com/user-attachments/assets/64e52b02-9fee-4fa1-92ee-2fbe1d6cf172" />
 
 
 sns.jointplot(x='Age',y='Fare',data=df,kind="hist")
@@ -138,18 +134,31 @@ sns.heatmap(corr1,annot=True)
 
 sns.catplot(x='Gender',col='Survived',data=df,kind='count',color='green')
 
-![WhatsApp Image 2025-10-07 at 16 06 10_68f7b666](https://github.com/user-attachments/assets/88956ccf-c8c3-4af1-b6ee-53f2d620615d)
+![WhatsApp Image 2025-10-07 at 16 05 58_5058ec36](https://github.com/user-attachments/assets/b87f214a-49ad-4f35-8eef-68655a19cf92)
 
 
 df.boxplot(column="Survived",by="Gender")
 
-![WhatsApp Image 2025-10-07 at 16 06 10_68f7b666](https://github.com/user-attachments/assets/f7fb2c8a-90ac-49cd-bf2c-bbae69a658a7)
+![WhatsApp Image 2025-10-07 at 16 06 25_2267a81e](https://github.com/user-attachments/assets/fbdebcf1-612d-4970-916a-f775226c6b2a)
 
 
 sns.catplot(data=df,col="Suvived",x="Gender",hue="Pclass",kind="count")
 
+![WhatsApp Image 2025-10-07 at 16 05 26_edbae23a](https://github.com/user-attachments/assets/a2c94892-920c-4092-9c87-ab51cbfefa1b)
 
 
+ import matplotlib.pyplot as plt
+ 
+ fig,ax1=plt.subplots(figsize=(8,5))
+ 
+ pt=sns.boxplot(ax=ax1,x='Pclass',y='Age',hue='Gender',data=df)
+
+ ![WhatsApp Image 2025-10-07 at 16 05 38_b14894d6](https://github.com/user-attachments/assets/616df7e3-8529-4709-86d1-07aee7bb0463)
+
+
+# RESULT
+Thus performed Exploratory Data Analysis on the given data set.
+      
 
 
 
